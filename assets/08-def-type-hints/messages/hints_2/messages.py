@@ -13,6 +13,7 @@
 'no viruses'
 """
 
+
 # tag::SHOW_COUNT[]
 def show_count(count: int, singular: str, plural: str = '') -> str:
     if count == 1:

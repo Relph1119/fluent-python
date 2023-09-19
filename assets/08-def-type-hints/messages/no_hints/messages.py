@@ -10,6 +10,7 @@
 # end::SHOW_COUNT_DOCTEST[]
 """
 
+
 # tag::SHOW_COUNT[]
 def show_count(count, word):
     if count == 1:
