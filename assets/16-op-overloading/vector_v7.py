@@ -337,10 +337,10 @@ class Vector:
         return math.hypot(*self)
 
     def __neg__(self):
-        return Vector(-x for x in self)
+        return self.__class__(-x for x in self)
 
     def __pos__(self):
-        return Vector(self)
+        return self.__class__(self)
 
     def __bool__(self):
         return bool(abs(self))
@@ -400,7 +400,7 @@ class Vector:
     def __add__(self, other):
         try:
             pairs = itertools.zip_longest(self, other, fillvalue=0.0)
-            return Vector(a + b for a, b in pairs)
+            return self.__class__(a + b for a, b in pairs)
         except TypeError:
             return NotImplemented
 
@@ -412,7 +412,7 @@ class Vector:
             factor = float(scalar)
         except TypeError:
             return NotImplemented
-        return Vector(n * factor for n in self)
+        return self.__class__(n * factor for n in self)
 
     def __rmul__(self, scalar):
         return self * scalar

@@ -328,7 +328,7 @@ class Vector:
 
 # tag::VECTOR_V8_EQ[]
     def __eq__(self, other):
-        if isinstance(other, Vector):  # <1>
+        if isinstance(other, self.__class__):  # <1>
             return (len(self) == len(other) and
                     all(a == b for a, b in zip(self, other)))
         else:
@@ -343,10 +343,10 @@ class Vector:
         return math.hypot(*self)
 
     def __neg__(self):
-        return Vector(-x for x in self)
+        return self.__class__(-x for x in self)
 
     def __pos__(self):
-        return Vector(self)
+        return self.__class__(self)
 
     def __bool__(self):
         return bool(abs(self))
@@ -406,7 +406,7 @@ class Vector:
     def __add__(self, other):
         try:
             pairs = itertools.zip_longest(self, other, fillvalue=0.0)
-            return Vector(a + b for a, b in pairs)
+            return self.__class__(a + b for a, b in pairs)
         except TypeError:
             return NotImplemented
 
@@ -415,7 +415,7 @@ class Vector:
 
     def __mul__(self, scalar):
         if isinstance(scalar, numbers.Real):
-            return Vector(n * scalar for n in self)
+            return self.__class__(n * scalar for n in self)
         else:
             return NotImplemented
 
