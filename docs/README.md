@@ -1,4 +1,4 @@
-# 《流畅的Python》学习笔记
+# 《流畅的Python》（第2版）学习笔记
 
 原书的项目地址：https://github.com/fluentpython/example-code-2e
 
