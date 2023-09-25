@@ -17,7 +17,7 @@ from httpx import AsyncClient  # <1>
 
 from flags import BASE_URL, save_flag, main  # <2>
 
-async def download_one(client: AsyncClient, cc: str):  # <3>
+async def download_one(client: AsyncClient, cc: str):  # type: ignore # <3>
     image = await get_flag(client, cc)
     save_flag(image, f'{cc}.gif')
     print(cc, end=' ', flush=True)
