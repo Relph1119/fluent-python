@@ -52,7 +52,7 @@ class FrozenJSON:
         try:
             return getattr(self.__data, name)  # <3>
         except AttributeError:
-            return FrozenJSON.build(self.__data[name])  # <4>
+            return self.__class__.build(self.__data[name])  # <4>
 
     def __dir__(self):  # <5>
         return self.__data.keys()
