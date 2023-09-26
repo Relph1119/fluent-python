@@ -18,3 +18,14 @@
       * [第14章 继承：瑕瑜互见](contents/ch14.md)
       * [第15章 类型提示进阶](contents/ch15.md)
       * [第16章 运算符重载](contents/ch16.md)
+    * 第四部分 控制流
+      * [第17章 迭代器、生成器和经典协程](contents/ch17.md) 
+      * [第18章 with、match和else块](contents/ch18.md) 
+      * [第19章 Python并发模型](contents/ch19.md) 
+      * [第20章 并发执行器](contents/ch20.md) 
+    * 第五部分 元编程
+      * [第21章 异步编程](contents/ch21.md)
+      * [第22章 动态属性和特性](contents/ch22.md)
+      * [第23章 属性描述符](contents/ch23.md)
+      * [第24章 类元编程](contents/ch24.md)
+    * [第25章 杂谈汇总](contents/ch25.md)
